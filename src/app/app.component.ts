@@ -12,7 +12,7 @@ export class AppComponent {
   private answers: Answers;
   private quiz: Quiz;
   private currentQuestionIndex: number;
-  showResults = false;
+  private showResults = false;
 
   constructor(private questionsService: QuestionsService) {
     this.questionsService.getJSON("maths").subscribe(data => {
