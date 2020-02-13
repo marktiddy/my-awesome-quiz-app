@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+
+<div class="welcome">
+  <h1>Choose a Quiz</h1>
+  <mat-grid-list cols="2">
+    <mat-grid-tile *ngFor="let quiz of quizzes">
+      <mat-card>
+        <mat-card-title>{{ quiz.label }}</mat-card-title>
+        <mat-card-subtitle>{{ quiz.description }}</mat-card-subtitle>
+        <button mat-raised-button color="warn" [routerLink]="['/', quiz.name]">
+          Play The Quiz
+        </button>
+        <!--<a [routerLink]="['/', quiz.name]">Go Play It</a>-->
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

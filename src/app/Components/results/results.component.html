@@ -1,0 +1,14 @@
+<!--This code uses ngClass to set a correct class to the answer if its model is correct. This let's you style accordingly-->
+<div class="results">
+  <h2>Results</h2>
+  <div
+    class="answer"
+    *ngFor="let a of answers.values"
+    [ngClass]="{ correct: a.correct }"
+  >
+    {{ a.value }}
+  </div>
+  <button mat-raised-button color="warn" [routerLink]="['/welcome']">
+    Choose Another Quiz
+  </button>
+</div>
